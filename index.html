@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulateur de Combat</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+
+  <!-- Ta feuille de style (conserve le chemin que tu utilises) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="resultats" id="resDivCalculator">
+    <h3 class="big-title">Résultats des calculs</h3>
+
+    <div class="calculator" id="contentResCalculator">
+
+	<div id="outputCalculator">
+	  <h3 class="emptyResult">
+		Aucun résultats pour le moment
+	  </h3>
+	</div>
+
+		<div class="ml calculatorForm">
+
+		  <!-- COLONNE MEMBRE -->
+		  <div class="member-block">
+
+			<h2>Membre de la guilde</h2>
+
+			<div class="field">
+			  <label>Joueur :</label>
+			  <select id="listeJoueurs">
+				<option value="">Sélectionner un joueur</option>
+			  </select>
+			</div>
+
+			<div class="field">
+			  <label>Puissance totale :</label>
+			  <input id="puissance" placeholder="Ex: 2.5M">
+			</div>
+
+			<div class="field">
+			  <label>Puissance main :</label>
+			  <input id="puissanceMain" placeholder="Ex: 800K">
+			</div>
+
+			<div class="field">
+			  <label>Élément :</label>
+			  <select id="element">
+						<option value="dark">Dark</option>
+				<option value="light">Light</option>
+				<option value="earth">Earth</option>
+			 </select>
+			</div>
+
+		  </div>
+
+		  <!-- COLONNE ADV -->
+		  <div class="opponent-block">
+
+			<h2>Adversaire</h2>
+
+			<!-- alignement -->
+			<div class="field invisible">
+			  <label>Joueur :</label>
+			  <select disabled>
+				<option>—</option>
+			  </select>
+			</div>
+
+			<div class="field">
+			  <label>Puissance totale :</label>
+			  <input id="puissanceA" placeholder="Ex: 3M">
+			</div>
+
+			<div class="field">
+			  <label>Puissance main :</label>
+			  <input id="puissanceMainA" placeholder="Ex: 1.2M">
+			</div>
+
+			<div class="field">
+			  <label for="elementA">Élément :</label>
+			  <select id="elementA">
+				<option value="dark">Dark</option>
+				<option value="light">Light</option>
+				<option value="earth">Earth</option>
+			  </select>
+			</div>
+			
+		<!-- traduction français 
+		
+			<div class="field">
+			 <label for="elementA">Élément :</label>
+			 <select id="elementA">
+				<option value="dark">Ténèbres</option>
+				<option value="light">Lumière</option>
+				<option value="earth">Terre</option>
+			  </select>
+			</div>
+		-->
+		
+		  </div>
+
+		</div>
+
+      <div class="btnContainer">
+        <button id="btnCalculerCalculator" type="button">Calculer</button>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- PAPAPARSE (inclus comme demandé) -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<!-- Ton script simulateur -->
+<script src="simulateur.js"></script>
+</body>
+</html>
