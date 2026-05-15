@@ -1,9 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\cmdhereadmin]
-@="Ouvrir CMD ici (Admin)"
-"HasLUAShield"=""
-"Icon"="cmd.exe"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\cmdhereadmin\command]
-@="powershell -windowstyle hidden -command \"Start-Process cmd -ArgumentList '/k cd /d \"%V\"' -Verb runAs\""
